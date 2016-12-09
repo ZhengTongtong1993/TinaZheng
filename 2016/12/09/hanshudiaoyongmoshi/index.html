@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8">
     
-    <title>abc | Hexo</title>
+    <title>函数的四种调用模式 | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="这是我的文章">
+    <meta name="description" content="函数的四种调用模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="abc">
-<meta property="og:url" content="http://yoursite.com/2016/11/30/abc/index.html">
+<meta property="og:title" content="函数的四种调用模式">
+<meta property="og:url" content="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="这是我的文章">
-<meta property="og:updated_time" content="2016-11-30T13:41:30.000Z">
+<meta property="og:description" content="函数的四种调用模式">
+<meta property="og:updated_time" content="2016-12-09T12:54:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="abc">
-<meta name="twitter:description" content="这是我的文章">
+<meta name="twitter:title" content="函数的四种调用模式">
+<meta name="twitter:description" content="函数的四种调用模式">
     
 
     
@@ -80,7 +80,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -99,10 +99,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
+            POSTS: 'Entradas',
             PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -133,7 +133,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
     </div>
 
                 </td>
@@ -153,16 +153,16 @@
             <h2 id="name">TinaZheng</h2>
             <h3 id="title"></h3>
             <span id="location"><i class="fa fa-map-marker"></i>China</span>
-            <a id="follow" target="_blank" href="https://github.com/ZhengTongtong1993">FOLLOW</a>
+            <a id="follow" target="_blank" href="https://github.com/ZhengTongtong1993">SEGUIR</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
                 3
-                <span>posts</span>
+                <span>Entradas</span>
             </div>
             <div class="article-info-block">
                 1
-                <span>tag</span>
+                <span>Etiqueta</span>
             </div>
         </div>
         
@@ -209,7 +209,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-abc" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-hanshudiaoyongmoshi" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -217,7 +217,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            abc
+            函数的四种调用模式
         </h1>
     
 
@@ -226,8 +226,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/11/30/abc/">
-            <time datetime="2016-11-30T13:40:23.000Z" itemprop="datePublished">2016-11-30</time>
+        <a href="/2016/12/09/hanshudiaoyongmoshi/">
+            <time datetime="2016-12-09T12:45:51.000Z" itemprop="datePublished">2016-12-09</time>
         </a>
     </div>
 
@@ -247,7 +247,24 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h1 id="这是我的文章"><a href="#这是我的文章" class="headerlink" title="这是我的文章"></a>这是我的文章<a id="more"></a></h1><p>jkjkjk<br>dsadasd<br>dasd</p>
+            <h1 id="函数的四种调用模式"><a href="#函数的四种调用模式" class="headerlink" title="函数的四种调用模式"></a>函数的四种调用模式<a id="more"></a></h1><h2 id="函数调用模式"><a href="#函数调用模式" class="headerlink" title="函数调用模式"></a>函数调用模式</h2><p>形式：函数名();<br>this:window</p>
+<h2 id="方法调用模式"><a href="#方法调用模式" class="headerlink" title="方法调用模式"></a>方法调用模式</h2><p>形式：对象名.方法名();<br>this: 调用该方法的对象</p>
+<h2 id="构造函数调用模式"><a href="#构造函数调用模式" class="headerlink" title="构造函数调用模式"></a>构造函数调用模式</h2><p>形式：new 函数名()<br>this: new创建出来的对象</p>
+<h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">    o.name = <span class="string">"zs"</span>;</div><div class="line">    o.age = <span class="number">18</span>;</div><div class="line">    <span class="keyword">return</span> o;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> p = createPerson();</div></pre></td></tr></table></figure>
+<h3 id="寄生模式"><a href="#寄生模式" class="headerlink" title="寄生模式"></a>寄生模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">    o.name = <span class="string">"zs"</span>;</div><div class="line">    o.age = <span class="number">18</span>;</div><div class="line">    <span class="keyword">return</span> o;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Person();</div></pre></td></tr></table></figure>
+<h2 id="上下文调用模式"><a href="#上下文调用模式" class="headerlink" title="上下文调用模式"></a>上下文调用模式</h2><p>在其他的调用模式中，this不可以赋值，也就不能改变<br>在上下文调用模式中，可以进行手动的设置this的值。</p>
+<h3 id="call"><a href="#call" class="headerlink" title="call"></a>call</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">函数名.call(对象, 参数<span class="number">1</span>, 参数<span class="number">2</span>, 参数<span class="number">3.</span>..)</div></pre></td></tr></table></figure>
+<ol>
+<li>调用函数</li>
+<li>将函数内的this指向第一个参数中的对象</li>
+<li>将除第一个参数外的所有参数依次传给函数，做为实参</li>
+</ol>
+<h3 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">函数名.apply(对象, 数组)</div></pre></td></tr></table></figure>
+<ol>
+<li>调用函数</li>
+<li>将函数内的this指向第一个参数中的对象</li>
+<li>将第二个参数中的数组拆解开，将数组中的元素依次的传给函数当做实参</li>
+</ol>
 
         
         </div>
@@ -258,7 +275,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/11/30/abc/" data-id="ciwdk4uwv0000l4uvca3olxfi" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/" data-id="ciwhspm9r000020uvvxsylu1z" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -326,7 +343,7 @@
 
             
     
-        <a href="http://yoursite.com/2016/11/30/abc/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2016/11/30/abc/">Comments</a>
+        <a href="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/">Comentarios</a>
     
 
         </footer>
@@ -335,19 +352,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/12/06/svn/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
-            <div class="article-nav-title">
-                
-                    svn
-                
-            </div>
-        </a>
     
-    
-        <a href="/2016/11/13/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Hello World</div>
+        <a href="/2016/12/06/svn/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">svn</div>
         </a>
     
 </nav>
@@ -361,7 +369,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/11/30/abc/" data-title="abc" data-url="http://yoursite.com/2016/11/30/abc/"></div>
+    <div class="ds-thread" data-thread-key="2016/12/09/hanshudiaoyongmoshi/" data-title="函数的四种调用模式" data-url="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
@@ -409,9 +417,28 @@
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">recent</h3>
+        <h3 class="widget-title">Recientes</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/09/hanshudiaoyongmoshi/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/12/09/hanshudiaoyongmoshi/" class="title">函数的四种调用模式</a></p>
+                            <p class="item-date"><time datetime="2016-12-09T12:45:51.000Z" itemprop="datePublished">2016-12-09</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -429,25 +456,6 @@
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/2016/12/06/svn/" class="title">svn</a></p>
                             <p class="item-date"><time datetime="2016-12-06T13:05:20.000Z" itemprop="datePublished">2016-12-06</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/11/30/abc/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2016/11/30/abc/" class="title">abc</a></p>
-                            <p class="item-date"><time datetime="2016-11-30T13:40:23.000Z" itemprop="datePublished">2016-11-30</time></p>
                         </div>
                     </li>
                 
@@ -479,16 +487,16 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">archives</h3>
+        <h3 class="widget-title">Archivos</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">tags</h3>
+        <h3 class="widget-title">Etiquetas</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">2</span></li></ul>
         </div>
@@ -497,7 +505,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">tag cloud</h3>
+        <h3 class="widget-title">Nube de etiquetas</h3>
         <div class="widget tagcloud">
             <a href="/tags/html/" style="font-size: 10px;">html</a>
         </div>
@@ -506,7 +514,7 @@
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">links</h3>
+        <h3 class="widget-title">Links</h3>
         <div class="widget">
             <ul>
                 
