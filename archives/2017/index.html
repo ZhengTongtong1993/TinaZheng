@@ -3,18 +3,14 @@
 <head>
     <meta charset="utf-8">
     
-    <title>函数的四种调用模式 | Hexo</title>
+    <title>Archivo: 2017 | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="函数的四种调用模式">
-<meta property="og:type" content="article">
-<meta property="og:title" content="函数的四种调用模式">
-<meta property="og:url" content="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="函数的四种调用模式">
-<meta property="og:updated_time" content="2016-12-09T12:54:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="函数的四种调用模式">
-<meta name="twitter:description" content="函数的四种调用模式">
+<meta name="twitter:title" content="Hexo">
     
 
     
@@ -209,217 +205,45 @@
 </aside>
 
             
-            <section id="main"><article id="post-hanshudiaoyongmoshi" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+            <section id="main"><div class="timeline timeline-wrap">
+    
+            <div class="timeline-row timeline-row-major">
+                <span class="node"><i class="fa fa-calendar"></i></span>
+                <h1 class="title">2017</h1>
+            </div>
         
-        
-            <header class="article-header">
+        <div class="timeline-row">
+            <span class="node"></span>
+            <div class="content">
                 
     
-        <h1 class="article-title" itemprop="name">
-            函数的四种调用模式
+        <h1 itemprop="name">
+            <a class="timeline-article-title" href="/2017/03/29/closer/">closer</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
+                <div class="article-meta">
+                    
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/12/09/hanshudiaoyongmoshi/">
-            <time datetime="2016-12-09T12:45:51.000Z" itemprop="datePublished">2016-12-09</time>
+        <a href="/2017/03/29/closer/">
+            <time datetime="2017-03-29T08:34:51.000Z" itemprop="datePublished">2017-03-29</time>
         </a>
     </div>
 
 
-                        
-                        
+                    
+                    
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/html/">html</a>
     </div>
 
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="函数的四种调用模式"><a href="#函数的四种调用模式" class="headerlink" title="函数的四种调用模式"></a>函数的四种调用模式<a id="more"></a></h1><h2 id="函数调用模式"><a href="#函数调用模式" class="headerlink" title="函数调用模式"></a>函数调用模式</h2><p>形式：函数名();<br>this:window</p>
-<h2 id="方法调用模式"><a href="#方法调用模式" class="headerlink" title="方法调用模式"></a>方法调用模式</h2><p>形式：对象名.方法名();<br>this: 调用该方法的对象</p>
-<h2 id="构造函数调用模式"><a href="#构造函数调用模式" class="headerlink" title="构造函数调用模式"></a>构造函数调用模式</h2><p>形式：new 函数名()<br>this: new创建出来的对象</p>
-<h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">    o.name = <span class="string">"zs"</span>;</div><div class="line">    o.age = <span class="number">18</span>;</div><div class="line">    <span class="keyword">return</span> o;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> p = createPerson();</div></pre></td></tr></table></figure>
-<h3 id="寄生模式"><a href="#寄生模式" class="headerlink" title="寄生模式"></a>寄生模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">    o.name = <span class="string">"zs"</span>;</div><div class="line">    o.age = <span class="number">18</span>;</div><div class="line">    <span class="keyword">return</span> o;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Person();</div></pre></td></tr></table></figure>
-<h2 id="上下文调用模式"><a href="#上下文调用模式" class="headerlink" title="上下文调用模式"></a>上下文调用模式</h2><p>在其他的调用模式中，this不可以赋值，也就不能改变<br>在上下文调用模式中，可以进行手动的设置this的值。</p>
-<h3 id="call"><a href="#call" class="headerlink" title="call"></a>call</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">函数名.call(对象, 参数<span class="number">1</span>, 参数<span class="number">2</span>, 参数<span class="number">3.</span>..)</div></pre></td></tr></table></figure>
-<ol>
-<li>调用函数</li>
-<li>将函数内的this指向第一个参数中的对象</li>
-<li>将除第一个参数外的所有参数依次传给函数，做为实参</li>
-</ol>
-<h3 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">函数名.apply(对象, 数组)</div></pre></td></tr></table></figure>
-<ol>
-<li>调用函数</li>
-<li>将函数内的this指向第一个参数中的对象</li>
-<li>将第二个参数中的数组拆解开，将数组中的元素依次的传给函数当做实参</li>
-</ol>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/" data-id="cj151092z000bcgmcmk7sn613" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/">Comentarios</a>
-    
-
-        </footer>
-    </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2017/03/29/closer/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Más nuevo</strong>
-            <div class="article-nav-title">
-                
-                    closer
-                
+                </div>
             </div>
-        </a>
+        </div>
     
-    
-        <a href="/2016/12/06/svn/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Más viejo</strong>
-            <div class="article-nav-title">svn</div>
-        </a>
-    
-</nav>
-
-
-    
-</article>
-
-
-    
-    <section id="comments">
-    
-        
-    <div class="ds-thread" data-thread-key="2016/12/09/hanshudiaoyongmoshi/" data-title="函数的四种调用模式" data-url="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/"></div>
-    <style>
-        #ds-thread #ds-reset .ds-textarea-wrapper {
-            background: none;
-        }
-        #ds-reset .ds-avatar img {
-            box-shadow: none;
-        }
-        #ds-reset .ds-gradient-bg {
-            background: #f7f7f7;
-        }
-        #ds-thread #ds-reset li.ds-tab a {
-            border-radius: 3px;
-        }
-        #ds-thread #ds-reset .ds-post-button {
-            color: white;
-            border: none;
-            box-shadow: none;
-            background: #d32;
-            text-shadow: none;
-            font-weight: normal;
-            font-family: 'Microsoft Yahei';
-        }
-        #ds-thread #ds-reset .ds-post-button:hover {
-            color: white;
-            background: #DE594C;
-        }
-        #ds-thread #ds-reset .ds-post-button:active {
-            background: #d32;
-        }
-        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
-            color: white;
-            background: #d32;
-            box-shadow: none;
-            text-shadow: none;
-            font-weight: normal;
-        }
-    </style>
-
-    
-    </section>
-
+</div>
 </section>
             
                 <aside id="sidebar">

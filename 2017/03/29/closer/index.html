@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8">
     
-    <title>函数的四种调用模式 | Hexo</title>
+    <title>closer | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="函数的四种调用模式">
+    <meta name="description" content="闭包：SVN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="函数的四种调用模式">
-<meta property="og:url" content="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/index.html">
+<meta property="og:title" content="closer">
+<meta property="og:url" content="http://yoursite.com/2017/03/29/closer/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="函数的四种调用模式">
-<meta property="og:updated_time" content="2016-12-09T12:54:41.000Z">
+<meta property="og:description" content="闭包：SVN">
+<meta property="og:updated_time" content="2017-03-29T09:17:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="函数的四种调用模式">
-<meta name="twitter:description" content="函数的四种调用模式">
+<meta name="twitter:title" content="closer">
+<meta name="twitter:description" content="闭包：SVN">
     
 
     
@@ -209,7 +209,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-hanshudiaoyongmoshi" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-closer" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -217,7 +217,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            函数的四种调用模式
+            closer
         </h1>
     
 
@@ -226,8 +226,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/12/09/hanshudiaoyongmoshi/">
-            <time datetime="2016-12-09T12:45:51.000Z" itemprop="datePublished">2016-12-09</time>
+        <a href="/2017/03/29/closer/">
+            <time datetime="2017-03-29T08:34:51.000Z" itemprop="datePublished">2017-03-29</time>
         </a>
     </div>
 
@@ -247,24 +247,14 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h1 id="函数的四种调用模式"><a href="#函数的四种调用模式" class="headerlink" title="函数的四种调用模式"></a>函数的四种调用模式<a id="more"></a></h1><h2 id="函数调用模式"><a href="#函数调用模式" class="headerlink" title="函数调用模式"></a>函数调用模式</h2><p>形式：函数名();<br>this:window</p>
-<h2 id="方法调用模式"><a href="#方法调用模式" class="headerlink" title="方法调用模式"></a>方法调用模式</h2><p>形式：对象名.方法名();<br>this: 调用该方法的对象</p>
-<h2 id="构造函数调用模式"><a href="#构造函数调用模式" class="headerlink" title="构造函数调用模式"></a>构造函数调用模式</h2><p>形式：new 函数名()<br>this: new创建出来的对象</p>
-<h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">    o.name = <span class="string">"zs"</span>;</div><div class="line">    o.age = <span class="number">18</span>;</div><div class="line">    <span class="keyword">return</span> o;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> p = createPerson();</div></pre></td></tr></table></figure>
-<h3 id="寄生模式"><a href="#寄生模式" class="headerlink" title="寄生模式"></a>寄生模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">    o.name = <span class="string">"zs"</span>;</div><div class="line">    o.age = <span class="number">18</span>;</div><div class="line">    <span class="keyword">return</span> o;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Person();</div></pre></td></tr></table></figure>
-<h2 id="上下文调用模式"><a href="#上下文调用模式" class="headerlink" title="上下文调用模式"></a>上下文调用模式</h2><p>在其他的调用模式中，this不可以赋值，也就不能改变<br>在上下文调用模式中，可以进行手动的设置this的值。</p>
-<h3 id="call"><a href="#call" class="headerlink" title="call"></a>call</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">函数名.call(对象, 参数<span class="number">1</span>, 参数<span class="number">2</span>, 参数<span class="number">3.</span>..)</div></pre></td></tr></table></figure>
-<ol>
-<li>调用函数</li>
-<li>将函数内的this指向第一个参数中的对象</li>
-<li>将除第一个参数外的所有参数依次传给函数，做为实参</li>
-</ol>
-<h3 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">函数名.apply(对象, 数组)</div></pre></td></tr></table></figure>
-<ol>
-<li>调用函数</li>
-<li>将函数内的this指向第一个参数中的对象</li>
-<li>将第二个参数中的数组拆解开，将数组中的元素依次的传给函数当做实参</li>
-</ol>
+            <h1 id="闭包：SVN"><a href="#闭包：SVN" class="headerlink" title="闭包：SVN"></a>闭包：SVN<a id="more"></a></h1><ul>
+<li>语文解释：封闭的包裹结构</li>
+<li>js的解释：函数就是一个闭包</li>
+</ul>
+<h2 id="闭包要解决的问题是什么？"><a href="#闭包要解决的问题是什么？" class="headerlink" title="闭包要解决的问题是什么？"></a>闭包要解决的问题是什么？</h2><p>函数内部的数据无法被外界直接访问！</p>
+<h2 id="如何解决？"><a href="#如何解决？" class="headerlink" title="如何解决？"></a>如何解决？</h2><p>在函数内部返回一个函数，用来操作该函数内部的数据。</p>
+<h2 id="闭包的原理（作用域）"><a href="#闭包的原理（作用域）" class="headerlink" title="闭包的原理（作用域）"></a>闭包的原理（作用域）</h2><p>函数中的变量无法被上一级作用域访问，但是可以被下一级作用域访问。</p>
+<h2 id="闭包的基本模型"><a href="#闭包的基本模型" class="headerlink" title="闭包的基本模型"></a>闭包的基本模型</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> name = <span class="string">""</span>;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> name;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
         
         </div>
@@ -275,7 +265,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/" data-id="cj151092z000bcgmcmk7sn613" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2017/03/29/closer/" data-id="cj15109120005cgmcydvokp6s" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -343,7 +333,7 @@
 
             
     
-        <a href="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/">Comentarios</a>
+        <a href="http://yoursite.com/2017/03/29/closer/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2017/03/29/closer/">Comentarios</a>
     
 
         </footer>
@@ -352,19 +342,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/03/29/closer/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Más nuevo</strong>
-            <div class="article-nav-title">
-                
-                    closer
-                
-            </div>
-        </a>
     
-    
-        <a href="/2016/12/06/svn/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/12/09/hanshudiaoyongmoshi/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Más viejo</strong>
-            <div class="article-nav-title">svn</div>
+            <div class="article-nav-title">函数的四种调用模式</div>
         </a>
     
 </nav>
@@ -378,7 +359,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/12/09/hanshudiaoyongmoshi/" data-title="函数的四种调用模式" data-url="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/"></div>
+    <div class="ds-thread" data-thread-key="2017/03/29/closer/" data-title="closer" data-url="http://yoursite.com/2017/03/29/closer/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
