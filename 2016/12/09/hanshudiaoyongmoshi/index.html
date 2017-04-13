@@ -5,16 +5,25 @@
     
     <title>函数的四种调用模式 | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="函数的四种调用模式">
+    <meta name="description" content="函数的四种调用模式函数调用模式形式：函数名();this:window
+方法调用模式形式：对象名.方法名();this: 调用该方法的对象
+构造函数调用模式形式：new 函数名()this: new创建出来的对象
+工厂模式12345678function createPerson()&amp;#123;    var o = new Object();    o.name = &quot;zs&quot;;    o.age">
 <meta property="og:type" content="article">
 <meta property="og:title" content="函数的四种调用模式">
 <meta property="og:url" content="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="函数的四种调用模式">
-<meta property="og:updated_time" content="2016-12-09T12:54:41.000Z">
+<meta property="og:description" content="函数的四种调用模式函数调用模式形式：函数名();this:window
+方法调用模式形式：对象名.方法名();this: 调用该方法的对象
+构造函数调用模式形式：new 函数名()this: new创建出来的对象
+工厂模式12345678function createPerson()&amp;#123;    var o = new Object();    o.name = &quot;zs&quot;;    o.age">
+<meta property="og:updated_time" content="2017-04-13T13:08:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="函数的四种调用模式">
-<meta name="twitter:description" content="函数的四种调用模式">
+<meta name="twitter:description" content="函数的四种调用模式函数调用模式形式：函数名();this:window
+方法调用模式形式：对象名.方法名();this: 调用该方法的对象
+构造函数调用模式形式：new 函数名()this: new创建出来的对象
+工厂模式12345678function createPerson()&amp;#123;    var o = new Object();    o.name = &quot;zs&quot;;    o.age">
     
 
     
@@ -80,7 +89,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Cari" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -99,10 +108,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'pos',
+            POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'kategori',
-            TAGS: 'tag',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -133,7 +142,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Cari" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
     </div>
 
                 </td>
@@ -153,12 +162,12 @@
             <h2 id="name">TinaZheng</h2>
             <h3 id="title"></h3>
             <span id="location"><i class="fa fa-map-marker"></i>China</span>
-            <a id="follow" target="_blank" href="https://github.com/ZhengTongtong1993">IKUTI</a>
+            <a id="follow" target="_blank" href="https://github.com/ZhengTongtong1993">FOLLOW</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
                 4
-                <span>pos</span>
+                <span>posts</span>
             </div>
             <div class="article-info-block">
                 1
@@ -247,7 +256,7 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h1 id="函数的四种调用模式"><a href="#函数的四种调用模式" class="headerlink" title="函数的四种调用模式"></a>函数的四种调用模式<a id="more"></a></h1><h2 id="函数调用模式"><a href="#函数调用模式" class="headerlink" title="函数调用模式"></a>函数调用模式</h2><p>形式：函数名();<br>this:window</p>
+            <h1 id="函数的四种调用模式"><a href="#函数的四种调用模式" class="headerlink" title="函数的四种调用模式"></a>函数的四种调用模式</h1><h2 id="函数调用模式"><a href="#函数调用模式" class="headerlink" title="函数调用模式"></a>函数调用模式</h2><p>形式：函数名();<br>this:window</p>
 <h2 id="方法调用模式"><a href="#方法调用模式" class="headerlink" title="方法调用模式"></a>方法调用模式</h2><p>形式：对象名.方法名();<br>this: 调用该方法的对象</p>
 <h2 id="构造函数调用模式"><a href="#构造函数调用模式" class="headerlink" title="构造函数调用模式"></a>构造函数调用模式</h2><p>形式：new 函数名()<br>this: new创建出来的对象</p>
 <h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">    o.name = <span class="string">"zs"</span>;</div><div class="line">    o.age = <span class="number">18</span>;</div><div class="line">    <span class="keyword">return</span> o;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> p = createPerson();</div></pre></td></tr></table></figure>
@@ -275,7 +284,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/" data-id="cj151m7f40002nomcfcjcgo2i" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/" data-id="cj1gbq0p0000070mc3wdp0hlu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -343,7 +352,7 @@
 
             
     
-        <a href="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/">Komentar</a>
+        <a href="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/">Comments</a>
     
 
         </footer>
@@ -353,7 +362,7 @@
 <nav id="article-nav">
     
         <a href="/2017/03/29/closer/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Lebih baru</strong>
+            <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
                     closer
@@ -363,7 +372,7 @@
     
     
         <a href="/2016/12/06/svn/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Lebih Tua</strong>
+            <strong class="article-nav-caption">Older</strong>
             <div class="article-nav-title">svn</div>
         </a>
     
@@ -426,7 +435,7 @@
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">terbaru</h3>
+        <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
@@ -515,7 +524,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">arsip</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li></ul>
         </div>
@@ -524,7 +533,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">tag</h3>
+        <h3 class="widget-title">tags</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">3</span></li></ul>
         </div>
@@ -533,7 +542,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">awan tag</h3>
+        <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
             <a href="/tags/html/" style="font-size: 10px;">html</a>
         </div>
@@ -542,7 +551,7 @@
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">tautan</h3>
+        <h3 class="widget-title">links</h3>
         <div class="widget">
             <ul>
                 
