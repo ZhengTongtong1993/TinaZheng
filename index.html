@@ -243,16 +243,10 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><ul>
-<li>语文解释：封闭的包裹结构</li>
-<li>js的解释：函数就是一个闭包</li>
-</ul>
-<h2 id="闭包要解决的问题是什么？"><a href="#闭包要解决的问题是什么？" class="headerlink" title="闭包要解决的问题是什么？"></a>闭包要解决的问题是什么？</h2><p>函数内部的数据无法被外界直接访问！</p>
-<h2 id="如何解决？"><a href="#如何解决？" class="headerlink" title="如何解决？"></a>如何解决？</h2><p>在函数内部返回一个函数，用来操作该函数内部的数据。</p>
-<h2 id="闭包的原理（作用域）"><a href="#闭包的原理（作用域）" class="headerlink" title="闭包的原理（作用域）"></a>闭包的原理（作用域）</h2><p>函数中的变量无法被上一级作用域访问，但是可以被下一级作用域访问。</p>
-<h2 id="闭包的基本模型"><a href="#闭包的基本模型" class="headerlink" title="闭包的基本模型"></a>闭包的基本模型</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> name = <span class="string">""</span>;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> name;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+            <p><h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</p>
+            <p class="article-more-link">
+                <a href="/2017/03/29/closer/#more">Read More</a>
+            </p>
         
         </div>
         <footer class="article-footer">
@@ -262,7 +256,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/03/29/closer/" data-id="cj1gf9q2g000078mcuy8wbvh4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/03/29/closer/" data-id="cj1gfc6fx0007qkmch1cmp1bn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -377,26 +371,10 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <h1 id="函数的四种调用模式"><a href="#函数的四种调用模式" class="headerlink" title="函数的四种调用模式"></a>函数的四种调用模式</h1><h2 id="函数调用模式"><a href="#函数调用模式" class="headerlink" title="函数调用模式"></a>函数调用模式</h2><p>形式：函数名();<br>this:window</p>
-<h2 id="方法调用模式"><a href="#方法调用模式" class="headerlink" title="方法调用模式"></a>方法调用模式</h2><p>形式：对象名.方法名();<br>this: 调用该方法的对象</p>
-<h2 id="构造函数调用模式"><a href="#构造函数调用模式" class="headerlink" title="构造函数调用模式"></a>构造函数调用模式</h2><p>形式：new 函数名()<br>this: new创建出来的对象</p>
-<h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">    o.name = <span class="string">"zs"</span>;</div><div class="line">    o.age = <span class="number">18</span>;</div><div class="line">    <span class="keyword">return</span> o;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> p = createPerson();</div></pre></td></tr></table></figure>
-<h3 id="寄生模式"><a href="#寄生模式" class="headerlink" title="寄生模式"></a>寄生模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">    o.name = <span class="string">"zs"</span>;</div><div class="line">    o.age = <span class="number">18</span>;</div><div class="line">    <span class="keyword">return</span> o;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Person();</div></pre></td></tr></table></figure>
-<h2 id="上下文调用模式"><a href="#上下文调用模式" class="headerlink" title="上下文调用模式"></a>上下文调用模式</h2><p>在其他的调用模式中，this不可以赋值，也就不能改变<br>在上下文调用模式中，可以进行手动的设置this的值。</p>
-<h3 id="call"><a href="#call" class="headerlink" title="call"></a>call</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">函数名.call(对象, 参数<span class="number">1</span>, 参数<span class="number">2</span>, 参数<span class="number">3.</span>..)</div></pre></td></tr></table></figure>
-<ol>
-<li>调用函数</li>
-<li>将函数内的this指向第一个参数中的对象</li>
-<li>将除第一个参数外的所有参数依次传给函数，做为实参</li>
-</ol>
-<h3 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">函数名.apply(对象, 数组)</div></pre></td></tr></table></figure>
-<ol>
-<li>调用函数</li>
-<li>将函数内的this指向第一个参数中的对象</li>
-<li>将第二个参数中的数组拆解开，将数组中的元素依次的传给函数当做实参</li>
-</ol>
-
+            <p><h1 id="函数的四种调用模式"><a href="#函数的四种调用模式" class="headerlink" title="函数的四种调用模式"></a>函数的四种调用模式</p>
+            <p class="article-more-link">
+                <a href="/2016/12/09/hanshudiaoyongmoshi/#more">Read More</a>
+            </p>
         
         </div>
         <footer class="article-footer">
@@ -406,7 +384,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/" data-id="cj1gf9q2z000578mcry05k2bf" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/12/09/hanshudiaoyongmoshi/" data-id="cj1gfc6f90000qkmc4tfp1xcp" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -521,90 +499,10 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <h1 id="集中式版本控制：SVN"><a href="#集中式版本控制：SVN" class="headerlink" title="集中式版本控制：SVN"></a>集中式版本控制：SVN</h1><h2 id="一些术语"><a href="#一些术语" class="headerlink" title="一些术语"></a>一些术语</h2><ul>
-<li>源代码库（repository）：源代码统一存放的地方</li>
-<li>检出（checkout）：当你手上没有源代码的时候，就需要从 responsive checkout 一份</li>
-<li>提交（commit）：当你已经修改了代码，就需要 commit 到 repository</li>
-<li>更新（update）：当你已经 checkout 了一份源代码，Update 一下就可以和 repository 上的源代码同步，你手上的代码就会有最新的变更</li>
-</ul>
-<hr>
-<h2 id="使用-VisualSVN-搭建-SVN-服务器"><a href="#使用-VisualSVN-搭建-SVN-服务器" class="headerlink" title="使用 VisualSVN 搭建 SVN 服务器"></a>使用 VisualSVN 搭建 SVN 服务器</h2><p>SVN 服务器：运行 Subversion 服务的计算机。</p>
-<p>SVN服务器分为命令行工具和图形化工具，<br>为了方便，我们这里使用比较流行的图形化工具 <a href="https://www.visualsvn.com/" target="_blank" rel="external">VisualSVN</a></p>
-<p>安装完毕之后，基本使用流程如下：</p>
-<ul>
-<li>创建用户</li>
-<li>创建版本仓库</li>
-<li>设定用户权限</li>
-</ul>
-<h2 id="使用-TortoiseSVN-作为-SVN-客户端"><a href="#使用-TortoiseSVN-作为-SVN-客户端" class="headerlink" title="使用 TortoiseSVN 作为 SVN 客户端"></a>使用 TortoiseSVN 作为 SVN 客户端</h2><p>SVN 客户端：用户通过SVN客户端同SVN服务器交互</p>
-<p>SVN 客户端也分为命令行工具和图形化工具，这里我们使用最流行的 <a href="https://tortoisesvn.net/" target="_blank" rel="external">TortoiseSVN</a></p>
-<h3 id="TortoiseSVN-客户端基本操作流程"><a href="#TortoiseSVN-客户端基本操作流程" class="headerlink" title="TortoiseSVN 客户端基本操作流程"></a>TortoiseSVN 客户端基本操作流程</h3><ul>
-<li>检出项目：checkout<ul>
-<li>在没有源代码的前提下，需要通过 tortoise-svn 客户端下载</li>
-</ul>
-</li>
-<li>增加文件或目录：add（增加），删除、修改 源代码<ul>
-<li>只是在你的本地做这样的操作</li>
-</ul>
-</li>
-<li>提交修改：commit<ul>
-<li>帮你记录当前开发的软件的状态</li>
-</ul>
-</li>
-<li>更新文件或目录：update（更新）<ul>
-<li>别的开发人员在已有源代码的前提下可以通过 update 更新服务器上最新的版本</li>
-</ul>
-</li>
-<li>查看版本日志：log（日志）</li>
-</ul>
-<h3 id="关于冲突"><a href="#关于冲突" class="headerlink" title="关于冲突"></a>关于冲突</h3><p>良好的使用习惯就是，提交之前，先更新。</p>
-<p>为了避免冲突，别人的文件你最好不要动，<br>万一你要修改公共的文件或者是别人的文件，<br>跟别人最好口头沟通好，就是你改动的时候，<br>别人最好不要去改动，这样才能最大程度上避免冲突的问题。</p>
-<p>多人协作时，同个目录或同个文件需要不同成员共同开发，<br>这个时候 commit 和 update 就可能出现冲突。</p>
-<ul>
-<li>两个程序员只要不是修改了同一行程序，SVN 可以通过 update 自动合并修改</li>
-<li>但是如果两个程序员修改了同一行程序， SVN 会提示文件 conflict，需要手动确定</li>
-</ul>
-<p>如何解决？</p>
-<p>第一种解决方法：手动合并冲突的内容</p>
-<p>第二种解决方法：每次修改某个文件的时候对文件上锁，这样你在修改的过程中别人就无法更新这个文件</p>
-<p>建议：</p>
-<ul>
-<li>一个文件最好同一时间只被一个人修改提交</li>
-<li>多跟团队成员沟通</li>
-<li>不要随便去修改别人的文件</li>
-<li>使用 SVN 解决冲突特别恶心，现在用的人也越来越少了</li>
-</ul>
-<hr>
-<h2 id="版本管理使用建议"><a href="#版本管理使用建议" class="headerlink" title="版本管理使用建议"></a>版本管理使用建议</h2><ul>
-<li>不要频繁的提交版本<ul>
-<li>一般有比较成熟的功能模块的时候，再去提交</li>
-<li>修复了功能性 bug 的时候再去提交</li>
-</ul>
-</li>
-<li>每次 commit 之前都要 update<ul>
-<li>因为你在编辑这个文件的时候，可能比人已经编辑并提价了某个版本</li>
-<li>所以先 update，目的是为了检查一下服务器上有没有最新版，如果有，直接更新<ul>
-<li>更新的过程中如果遇到冲突，不要慌，去手动解决</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>每次 commit 的时候都务必要写提交日志<ul>
-<li>这个提交日志就好比你保存副本的时候加的一个标记</li>
-<li>目的是为了日后做版本的回退查找以及查看记录更新状态</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="使用总结"><a href="#使用总结" class="headerlink" title="使用总结"></a>使用总结</h2><ul>
-<li>版本控制管理系统</li>
-<li>源代码仓库 repository</li>
-<li>检出代码 checkout</li>
-<li>更新最新源代码 update</li>
-<li>提交修改 commit</li>
-</ul>
-
+            <p><h1 id="集中式版本控制：SVN"><a href="#集中式版本控制：SVN" class="headerlink" title="集中式版本控制：SVN"></a>集中式版本控制：SVN</p>
+            <p class="article-more-link">
+                <a href="/2016/12/06/svn/#more">Read More</a>
+            </p>
         
         </div>
         <footer class="article-footer">
@@ -614,7 +512,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/12/06/svn/" data-id="cj1gf9q34000778mcsmvkmllz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/12/06/svn/" data-id="cj1gfc6fs0005qkmcmxe7ddkn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -744,7 +642,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/11/13/hello-world/" data-id="cj1gf9q2p000278mcqcupa1nw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/11/13/hello-world/" data-id="cj1gfc6fi0002qkmcnd5bx3fp" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
