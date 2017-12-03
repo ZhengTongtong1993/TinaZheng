@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8">
     
-    <title>jsonp | Hexo</title>
+    <title>animation | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Jsonp请求">
+    <meta name="description" content="匀速直线动画">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jsonp">
-<meta property="og:url" content="http://yoursite.com/2017/12/03/jsonp/index.html">
+<meta property="og:title" content="animation">
+<meta property="og:url" content="http://yoursite.com/2017/12/03/animation/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Jsonp请求">
-<meta property="og:updated_time" content="2017-12-03T15:00:31.000Z">
+<meta property="og:description" content="匀速直线动画">
+<meta property="og:updated_time" content="2017-12-03T15:17:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jsonp">
-<meta name="twitter:description" content="Jsonp请求">
+<meta name="twitter:title" content="animation">
+<meta name="twitter:description" content="匀速直线动画">
     
 
     
@@ -209,7 +209,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-jsonp" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-animation" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -217,7 +217,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            jsonp
+            animation
         </h1>
     
 
@@ -226,8 +226,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/12/03/jsonp/">
-            <time datetime="2017-12-03T14:39:28.000Z" itemprop="datePublished">2017-12-03</time>
+        <a href="/2017/12/03/animation/">
+            <time datetime="2017-12-03T15:14:00.000Z" itemprop="datePublished">2017-12-03</time>
         </a>
     </div>
 
@@ -247,29 +247,49 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h1 id="Jsonp请求"><a href="#Jsonp请求" class="headerlink" title="Jsonp请求"></a>Jsonp请求<a id="more"></a></h1><ol>
-<li><p>跨域 只能发送 GET请求。一种不安全的请求方式。</p>
-</li>
-<li><p>原理：由于dom元素的 src属性 具有跨域功能。在实现跨域请求时，为了方便就使用script标签来做。</p>
-</li>
-<li><p>流程</p>
-<ul>
-<li>创建请求对象，就是 创建一个script标签</li>
-<li>将上述创建的script标签添加到页面的head标签下</li>
-<li>格式化数据</li>
-<li>创建全局回调函数<ul>
-<li>卸磨杀驴</li>
+            <h1 id="匀速直线动画"><a href="#匀速直线动画" class="headerlink" title="匀速直线动画"></a>匀速直线动画<a id="more"></a></h1><ol>
+<li>固定时间 </li>
+<li>固定距离</li>
+<li>如何判定动画结束的时机？<ul>
+<li>使用时间来判断是否结束动画。</li>
+<li>如果动画时间到达了 指定的时间，那么就结束动画，并且让动画元素到达终点</li>
 </ul>
 </li>
-<li>设置超时时间，如果超过此时间，也没有得到数据，表示请求失败。否则，请求成功。<ul>
-<li>卸磨杀驴</li>
+<li>实现思路<ul>
+<li>定义动画函数，animate函数。当调用animate函数时，即动画开始的时间</li>
+<li>定义render函数，用来给动画元素设置 属性值<ul>
+<li>计算当前动画元素所在的位置，然后累计到其对应属性值上。</li>
+<li>首先计算动画的时间间隔</li>
+<li>如果时间间隔大于或等于指定的总时间，那么就停止动画并设置动画元素到达终点</li>
+<li>否则，根据速度，动画时间间隔计算出位移。在将其与起始位置累加后赋值给elem</li>
 </ul>
 </li>
-<li>发送请求：指定script标签的src属性值。</li>
+<li>定义定时器，开始动画</li>
 </ul>
 </li>
 </ol>
-
+<h1 id="匀减速直线动画"><a href="#匀减速直线动画" class="headerlink" title="匀减速直线动画"></a>匀减速直线动画</h1><ol>
+<li>物理公式<ul>
+<li>a:  加速度 </li>
+<li>t： 时间间隔 </li>
+<li>v0：初始速度</li>
+<li>vt：末速度</li>
+<li>S： 位移</li>
+<li>正方向：S = v0 <em> t + a </em> t * t / 2;</li>
+<li>末速度：vt = v0 + at</li>
+</ul>
+</li>
+<li>S ==&gt; target - location<br> t ==&gt; duration<br> v0 = 0</li>
+<li><p>正方向 a = 2 <em> ( S - v0 </em> t) / ( t * t)</p>
+<pre><code>==&gt;   = 2 * S / ( t * t )
+==&gt;   = 2 * (target - location) /( duration * duration) 
+</code></pre><p>  vt = 2 * (target - location) / duration</p>
+</li>
+<li><p>time时间间隔内的 匀减速位移tween = v0 <em> time - a </em> time <em> time / 2<br> ==&gt; tween = 2 </em> distance * time / duration</p>
+<pre><code>- distance * time * time /( duration * duration) 
+</code></pre></li>
+</ol>
+<h1 id="动画的基本结构"><a href="#动画的基本结构" class="headerlink" title="动画的基本结构"></a>动画的基本结构</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">render</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">window</span>.setInterval(render, time);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -279,7 +299,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/12/03/jsonp/" data-id="cjaqww26300068omc4ogj6x1s" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2017/12/03/animation/" data-id="cjaqww25m00008omc06ek8g67" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -347,7 +367,7 @@
 
             
     
-        <a href="http://yoursite.com/2017/12/03/jsonp/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2017/12/03/jsonp/">Commentaires</a>
+        <a href="http://yoursite.com/2017/12/03/animation/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2017/12/03/animation/">Commentaires</a>
     
 
         </footer>
@@ -356,19 +376,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/12/03/animation/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Plus récent</strong>
-            <div class="article-nav-title">
-                
-                    animation
-                
-            </div>
-        </a>
     
-    
-        <a href="/2017/03/29/closer/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/12/03/jsonp/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Plus ancien</strong>
-            <div class="article-nav-title">closer</div>
+            <div class="article-nav-title">jsonp</div>
         </a>
     
 </nav>
@@ -382,7 +393,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2017/12/03/jsonp/" data-title="jsonp" data-url="http://yoursite.com/2017/12/03/jsonp/"></div>
+    <div class="ds-thread" data-thread-key="2017/12/03/animation/" data-title="animation" data-url="http://yoursite.com/2017/12/03/animation/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
